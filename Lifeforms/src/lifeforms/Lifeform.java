@@ -25,7 +25,7 @@ public class Lifeform {
     int experience;
     int level;
     
-    void init()
+    public void init()
     {
         id = UUID.randomUUID();
         name = "Joe" + Randomnumber(1,1000); 
@@ -41,4 +41,9 @@ public class Lifeform {
         Random randomGenerator = new Random();
         return min + randomGenerator.nextInt(max-min);      
     }
-}
+    //print lifeform info
+    public String getInfo()
+    {
+       return name + " " + strength;  
+    }
+} //end class
